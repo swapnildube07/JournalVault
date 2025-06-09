@@ -27,7 +27,7 @@ public class JournalEntryService {
     @Autowired
     private UserService userService;
 
-    private static  final Logger logger = LoggerFactory.getLogger(JournalEntryService.class);
+
 
     @Transactional
     public void saveEntry(JournalEntry journalEntry, String username) {
@@ -38,7 +38,7 @@ public class JournalEntryService {
             user.getJournalEntry().add(saved);
             userService.saveUser(user);
         } catch (Exception e) {
-            logger.info("SSS");
+
             throw new RuntimeException(e);
         }
     }
@@ -67,7 +67,7 @@ public class JournalEntryService {
                 journalEntryrepositary.deleteById(id);
             }
         } catch (Exception e) {
-            logger.info("SSSS");
+
             throw new RuntimeException(e);
         }
 

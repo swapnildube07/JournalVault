@@ -24,7 +24,7 @@ public class UserService {
 
     private  static  final PasswordEncoder passwordencoder = new BCryptPasswordEncoder();
 
-    private static  final Logger logger = LoggerFactory.getLogger(UserService.class);
+
 
 
     public boolean saveNewUser(User user) {
@@ -34,7 +34,7 @@ public class UserService {
             userRepository.save(user);
             return true;
         } catch (Exception e) {
-            logger.info("SSS");
+
             throw new RuntimeException("User Name  Already Taken "+ e);
 
         }
