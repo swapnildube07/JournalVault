@@ -1,7 +1,23 @@
 spring:
   profiles:
     active: prod
-#
-#logging:
-#  level:
-#    root: error
+  redis:
+   uri: redis-cli -u redis://default:i0QZJFspD9Mkaaw3oyhsBw6ddtyZt9FN@redis-14836.c232.us-east-1-2.ec2.redns.redis-cloud.com:14836
+
+weather:
+  api:
+    key: ffe3eda784cdb4527de85fb6347644b3
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: your.email@gmail.com
+    password: your-app-password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+
