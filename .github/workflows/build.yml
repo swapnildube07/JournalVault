@@ -1,5 +1,4 @@
-name: Java CI with Maven
-
+name: SonarQube
 on:
   push:
     branches:
@@ -41,4 +40,4 @@ jobs:
       - name: Build and analyze with SonarCloud
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn clean verify sonar:sonar -Dsonar.projectKey=journal -Dsonar.organization=journalvoult -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        run: mvn clean verify sonar:sonar -Dsonar.projectKey=journalvoult_journal-app -Dsonar.organization=journalvoult -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
